@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.core.widget.NestedScrollView
+        android:paddingBottom="100dp"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="Material 3 BottomAppBar"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Switch
+                android:layout_marginTop="50dp"
+                android:id="@+id/hideSwitch"
+                android:text="Hide BottomAppBar when scrolled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Switch
+                android:layout_marginTop="50dp"
+                android:id="@+id/fabAlinSwitch"
+                android:text="FAB Alignment Mode  Center / End"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Switch
+                android:layout_marginTop="50dp"
+                android:id="@+id/fabAnimationSwitch"
+                android:text="FAB Animation Mode  Slide / Scale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:text="Set Cradle Margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <NumberPicker
+                android:id="@+id/cradleMargin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/cradleResetButton"
+                android:text="Reset"
+                android:layout_gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:text="Set Cradle Round"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <NumberPicker
+                android:id="@+id/cradleRound"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/roundResetButton"
+                android:text="Reset"
+                android:layout_gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:text="Set Cradle Offset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <NumberPicker
+                android:id="@+id/cradleOffset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/offsetResetButton"
+                android:text="Reset"
+                android:layout_gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_gravity="bottom"
+        app:menu="@menu/menu_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@drawable/menu_24px"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:src="@drawable/add_24px"
+        app:layout_anchor="@id/bottomAppBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
