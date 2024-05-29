@@ -91,6 +91,9 @@ class MainActivity : AppCompatActivity() {
                 val dp = 12 * resources.displayMetrics.density
                 bottomAppBar.cradleVerticalOffset = dp
             }
+            fabSwitch.setOnCheckedChangeListener { _, isChecked ->
+                if (isChecked) fab.hide() else fab.show()
+            }
 
 
         }

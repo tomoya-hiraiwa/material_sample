@@ -23,6 +23,12 @@
                 android:layout_height="wrap_content"/>
             <Switch
                 android:layout_marginTop="50dp"
+                android:id="@+id/fabSwitch"
+                android:text="Hide FAB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Switch
+                android:layout_marginTop="50dp"
                 android:id="@+id/hideSwitch"
                 android:text="Hide BottomAppBar when scrolled"
                 android:layout_width="match_parent"
